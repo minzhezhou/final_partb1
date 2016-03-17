@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
   MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
   MPI_Comm_rank(MPI_COMM_WORLD,&myid);
 
-  if (myid = nprocs - 1) {
+  if (myid == 0) {
     mynpts = npts - (nprocs-1)*(npts/nprocs);
   } else {
     mynpts = npts/nprocs;
